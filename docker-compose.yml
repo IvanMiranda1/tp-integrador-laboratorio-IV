@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  frontend_biblioteca:
+    container_name: frontend_biblioteca
+    build: ./frontend
+    ports:
+      - 5173:5173
+    depends_on:
+      - backend_biblioteca
+  backend_biblioteca:
+    container_name: backend_biblioteca
+    image: biblioteca-app:1.0.0
+    build: ./backend
+    ports:
+      - 8080:8080
+    environment:
+      - DATABASE_URL=jdbc:postgresql://biblioteca_db:5432/biblioteca
+      - DATABASE_USERNAME=postgres
+      - DATABASE_PASSWORD=postgres
+    depends_on:
+      - biblioteca_db
+  biblioteca_db:
+    container_name: biblioteca_db
+    image: postgres:16.0
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: biblioteca

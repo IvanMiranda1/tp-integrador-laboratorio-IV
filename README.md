@@ -1,7 +1,7 @@
 # tp-integrador-laboratorio-IV
 Trabajo integrador de la materia Laboratorio IV
 
-* Una vez descargado el programa debemos asegurarnos de que esta instalado docker-compose en nuestro equipo
+* Una vez descargado el programa debemos asegurarnos de que esta instalado docker-compose en nuestro equipo y la variable de entorno JAVA_HOME configurada.
 * Primero debemos ingresar a la carpeta backend, y ejecutar dentro de la raiz donde se encuentra el archivo "mvnw" el comando:
 *   ./mvnw clean package -DskipTests
 * Debemos tener jdk para esto...

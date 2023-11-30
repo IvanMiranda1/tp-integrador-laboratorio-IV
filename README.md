@@ -1,4 +1,4 @@
-# tp-integrado-laboratorio-IV
+# tp-integrador-laboratorio-IV
 Trabajo integrador de la materia Laboratorio IV
 
 * Una vez descargado el programa debemos asegurarnos de que esta instalado docker-compose en nuestro equipo
